@@ -31,4 +31,12 @@ public class UserController {
         return userRepository.findAll();
     }
 
+
+    @RequestMapping("/user/delete")
+    public User delete(String username) {
+        User user = userRepository.save(username,null);
+        return user;
+    }
+
+
 }
